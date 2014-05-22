@@ -412,9 +412,9 @@ resKMEDOIDS <- table(pamk.result$pamobject$clustering,dfR[,label])
 
 
 # output results
-write.csv(resKMEANS, "Classification1_result1_KMEANS.csv")
-write.csv(resDBSCAN, "Classification1_result2_DBSCAN.csv")
-write.csv(resKMEDOIDS, "Classification1_result3_KMEDOIDS.csv")
+write.csv(resKMEANS, "Clustering_result1_KMEANS.csv")
+write.csv(resDBSCAN, "Clustering_result2_DBSCAN.csv")
+write.csv(resKMEDOIDS, "Clustering_result3_KMEDOIDS.csv")
 
 
 
