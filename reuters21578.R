@@ -394,17 +394,29 @@ table(dfR[,label])
 
 # k-means clustering
 kmeans.results <- kmeans(dfR[-label],10)
-table(dfR[,label], kmeans.results$cluster)
+resKMEANS <- table(dfR[,label], kmeans.results$cluster)
 
 
 
 # DBSCAN clustering
 ds <- dbscan(dfR[,-label],eps=0.42,MinPts=5)
-table(ds$cluster,dfR[,label])
+resDBSCAN <- table(ds$cluster,dfR[,label])
 
 
 
 # k-medoids clustering
 pamk.result = pamk(dfR[,-label])
 pamk.result$nc
-table(pamk.result$pamobject$clustering,dfR[,label])
+resKMEDOIDS <- table(pamk.result$pamobject$clustering,dfR[,label])
+
+
+
+# output results
+write.csv(resKMEANS, "Classification1_result1_KMEANS.csv")
+write.csv(resDBSCAN, "Classification1_result2_DBSCAN.csv")
+write.csv(resKMEDOIDS, "Classification1_result3_KMEDOIDS.csv")
+
+
+
+
+
