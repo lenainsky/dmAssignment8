@@ -13,6 +13,6 @@ The results are saved as output files to the working directory with the followin
 - Classification2_score1_SVM.csv
 - Classification2_score2_RF.csv
 - Classification2_score3_TREE.csv
-- Clustering_result1_KMEANS.csv")
-- Clustering_result2_DBSCAN.csv")
-- Clustering_result3_KMEDOIDS.csv")
+- Clustering_result1_KMEANS.csv
+- Clustering_result2_DBSCAN.csv
+- Clustering_result3_KMEDOIDS.csv
